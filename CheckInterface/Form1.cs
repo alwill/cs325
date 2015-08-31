@@ -15,6 +15,10 @@ namespace CheckInterface
         public Form1()
         {
             InitializeComponent();
+            // Get the current date.
+            DateTime thisDay = DateTime.Today;
+            // Display the date in the default (general) format.
+            DateInputLabel.Text = "_____" + thisDay.ToString("d") + "_____";
         }
 
         //THIS BUTTON SUBMITS INFO IN TEXT BOX TO POPULATE CHECK
@@ -57,6 +61,5 @@ namespace CheckInterface
         {
             //INPUT CLASS WILL HANDLE MEMO LENGTH CONSTRAINTS 
         }
-
     }
 }
