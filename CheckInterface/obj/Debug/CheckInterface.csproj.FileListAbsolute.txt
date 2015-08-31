@@ -1,0 +1,9 @@
+E:\cs325Resources\ClassProjects\CheckInterface\bin\Debug\CheckInterface.exe.config
+E:\cs325Resources\ClassProjects\CheckInterface\bin\Debug\CheckInterface.exe
+E:\cs325Resources\ClassProjects\CheckInterface\bin\Debug\CheckInterface.pdb
+E:\cs325Resources\ClassProjects\CheckInterface\obj\Debug\CheckInterface.csprojResolveAssemblyReference.cache
+E:\cs325Resources\ClassProjects\CheckInterface\obj\Debug\CheckInterface.Form1.resources
+E:\cs325Resources\ClassProjects\CheckInterface\obj\Debug\CheckInterface.Properties.Resources.resources
+E:\cs325Resources\ClassProjects\CheckInterface\obj\Debug\CheckInterface.csproj.GenerateResource.Cache
+E:\cs325Resources\ClassProjects\CheckInterface\obj\Debug\CheckInterface.exe
+E:\cs325Resources\ClassProjects\CheckInterface\obj\Debug\CheckInterface.pdb
