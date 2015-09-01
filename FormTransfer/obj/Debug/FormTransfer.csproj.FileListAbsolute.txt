@@ -1,0 +1,10 @@
+E:\cs325Resources\ClassProjects\FormTransfer\bin\Debug\FormTransfer.exe.config
+E:\cs325Resources\ClassProjects\FormTransfer\bin\Debug\FormTransfer.exe
+E:\cs325Resources\ClassProjects\FormTransfer\bin\Debug\FormTransfer.pdb
+E:\cs325Resources\ClassProjects\FormTransfer\obj\Debug\FormTransfer.csprojResolveAssemblyReference.cache
+E:\cs325Resources\ClassProjects\FormTransfer\obj\Debug\FormTransfer.Form1.resources
+E:\cs325Resources\ClassProjects\FormTransfer\obj\Debug\FormTransfer.Form2.resources
+E:\cs325Resources\ClassProjects\FormTransfer\obj\Debug\FormTransfer.Properties.Resources.resources
+E:\cs325Resources\ClassProjects\FormTransfer\obj\Debug\FormTransfer.csproj.GenerateResource.Cache
+E:\cs325Resources\ClassProjects\FormTransfer\obj\Debug\FormTransfer.exe
+E:\cs325Resources\ClassProjects\FormTransfer\obj\Debug\FormTransfer.pdb
