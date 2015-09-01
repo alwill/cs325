@@ -7,3 +7,12 @@ E:\cs325Resources\ClassProjects\CheckInterface\obj\Debug\CheckInterface.Properti
 E:\cs325Resources\ClassProjects\CheckInterface\obj\Debug\CheckInterface.csproj.GenerateResource.Cache
 E:\cs325Resources\ClassProjects\CheckInterface\obj\Debug\CheckInterface.exe
 E:\cs325Resources\ClassProjects\CheckInterface\obj\Debug\CheckInterface.pdb
+C:\Users\Alex\Documents\GitHub\cs325\CheckInterface\bin\Debug\CheckInterface.exe.config
+C:\Users\Alex\Documents\GitHub\cs325\CheckInterface\obj\Debug\CheckInterface.exe
+C:\Users\Alex\Documents\GitHub\cs325\CheckInterface\obj\Debug\CheckInterface.pdb
+C:\Users\Alex\Documents\GitHub\cs325\CheckInterface\obj\Debug\CheckInterface.csprojResolveAssemblyReference.cache
+C:\Users\Alex\Documents\GitHub\cs325\CheckInterface\obj\Debug\CheckInterface.Form1.resources
+C:\Users\Alex\Documents\GitHub\cs325\CheckInterface\obj\Debug\CheckInterface.Properties.Resources.resources
+C:\Users\Alex\Documents\GitHub\cs325\CheckInterface\obj\Debug\CheckInterface.csproj.GenerateResource.Cache
+C:\Users\Alex\Documents\GitHub\cs325\CheckInterface\bin\Debug\CheckInterface.exe
+C:\Users\Alex\Documents\GitHub\cs325\CheckInterface\bin\Debug\CheckInterface.pdb

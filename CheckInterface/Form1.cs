@@ -19,6 +19,7 @@ namespace CheckInterface
             DateTime thisDay = DateTime.Today;
             // Display the date in the default (general) format.
             DateInputLabel.Text = "_____" + thisDay.ToString("d") + "_____";
+            
         }
 
         //THIS BUTTON SUBMITS INFO IN TEXT BOX TO POPULATE CHECK
@@ -27,6 +28,7 @@ namespace CheckInterface
             InputNameLabel.Text = NameTextBox.Text;
             InputAmountLabel.Text = DollarTextBox.Text;
             InputMemoLabel.Text = MemoTextBox.Text;
+            AmountStringLabel.Text = InputProccessor.parseInput(InputAmountLabel.Text);
         }
 
         //THIS BUTTON CREATES A NEW CHECK BY INCREMENTING CHECK # AND CLEARING CHECK
@@ -54,6 +56,9 @@ namespace CheckInterface
 
         private void DollarTextBox_TextChanged(object sender, EventArgs e)
         {
+
+            
+            
             //INPUT CLASS WILL HANDLE DOLLAR CONSTRAINTS WHEN "SUBMIT" PUSHED
         }
 
