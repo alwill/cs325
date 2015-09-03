@@ -1,0 +1,19 @@
+c:\users\geoff\documents\visual studio 2015\Projects\InputForm\bin\Debug\InputForm.exe.config
+c:\users\geoff\documents\visual studio 2015\Projects\InputForm\bin\Debug\InputForm.exe
+c:\users\geoff\documents\visual studio 2015\Projects\InputForm\bin\Debug\InputForm.pdb
+c:\users\geoff\documents\visual studio 2015\Projects\InputForm\obj\Debug\InputForm.csprojResolveAssemblyReference.cache
+c:\users\geoff\documents\visual studio 2015\Projects\InputForm\obj\Debug\InputForm.InputForm.resources
+c:\users\geoff\documents\visual studio 2015\Projects\InputForm\obj\Debug\InputForm.Properties.Resources.resources
+c:\users\geoff\documents\visual studio 2015\Projects\InputForm\obj\Debug\InputForm.csproj.GenerateResource.Cache
+c:\users\geoff\documents\visual studio 2015\Projects\InputForm\obj\Debug\InputForm.exe
+c:\users\geoff\documents\visual studio 2015\Projects\InputForm\obj\Debug\InputForm.pdb
+E:\cs325Resources\ClassProjects\InputForm\InputForm\bin\Debug\InputForm.exe.config
+E:\cs325Resources\ClassProjects\InputForm\InputForm\obj\Debug\InputForm.exe
+E:\cs325Resources\ClassProjects\InputForm\InputForm\obj\Debug\InputForm.pdb
+E:\cs325Resources\ClassProjects\InputForm\InputForm\bin\Debug\InputForm.exe
+E:\cs325Resources\ClassProjects\InputForm\InputForm\bin\Debug\InputForm.pdb
+E:\cs325Resources\ClassProjects\InputForm\InputForm\obj\Debug\InputForm.csprojResolveAssemblyReference.cache
+E:\cs325Resources\ClassProjects\InputForm\InputForm\obj\Debug\InputForm.InputForm.resources
+E:\cs325Resources\ClassProjects\InputForm\InputForm\obj\Debug\InputForm.Properties.Resources.resources
+E:\cs325Resources\ClassProjects\InputForm\InputForm\obj\Debug\InputForm.csproj.GenerateResource.Cache
+E:\cs325Resources\ClassProjects\InputForm\InputForm\obj\Debug\InputForm.OutputForm.resources
