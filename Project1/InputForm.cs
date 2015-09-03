@@ -122,9 +122,7 @@ namespace Project1
 
         private void SubmitCheckButton_Click(object sender, EventArgs e)
         {
-            /*
-             *  ***Add input processor method calls here, pass handling to output interface?
-             */
+           
         }
 
         public string getName() {
@@ -132,7 +130,7 @@ namespace Project1
         }
         public string getDollar()
         {
-            return cAmount + "." + deciNum;
+            return cAmount;
         }
         public string getMemo()
         {

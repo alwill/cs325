@@ -15,7 +15,7 @@ namespace CheckInterface
 
             string[] parsedUserInput = userinput.Split('.'); //splits the user into two seperate parts. The whole amount and decimal
             
-            string dollarAmount  = parsedUserInput[0];
+            string dollarAmount  = parsedUserInput[0].Replace(",","");
 
             int leftDecimal = int.Parse(dollarAmount);
             string rightDecimal = parsedUserInput[1];

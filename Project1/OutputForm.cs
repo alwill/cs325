@@ -31,7 +31,7 @@ namespace Project1
             InputNameLabel.Text = ip.getName();
             InputAmountLabel.Text = ip.getDollar();
             InputMemoLabel.Text = ip.getMemo();
-            //AmountStringLabel.Text = ;
+            AmountStringLabel.Text = InputProcessor.parseInput(ip.getDollar()) ;
 
         }
 
@@ -43,7 +43,7 @@ namespace Project1
             //InputNameLabel.Text = NameTextBox.Text;
             //InputAmountLabel.Text = DollarTextBox.Text;
             //InputMemoLabel.Text = MemoTextBox.Text;
-            //AmountStringLabel.Text = InputProcessor.parseInput(InputAmountLabel.Text);
+           // AmountStringLabel.Text = InputProcessor.parseInput(InputAmountLabel.Text);
         }
 
         //THIS BUTTON CREATES A NEW CHECK BY INCREMENTING CHECK # AND CLEARING CHECK
