@@ -54,7 +54,7 @@ namespace Project1
         {
             double newAmount = double.Parse(amount);
             rt += newAmount;
-            return rt.ToString();
+            return "$" + rt.ToString("F");
         } 
         public static int checkCount()
         {
