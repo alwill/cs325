@@ -170,6 +170,11 @@ namespace Project1
                         Console.Write(amountParts[i] + ", ");
                     }
 
+                    if (amountParts[0] == "")
+                    {
+                        cAmount = String.Concat("0", cAmount);
+                    }
+
                     int deciDigitCount = amountParts[1].Length;
                     Console.WriteLine("Here is the value of deciDigitCount: " + deciDigitCount);
 
