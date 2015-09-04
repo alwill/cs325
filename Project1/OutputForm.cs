@@ -15,23 +15,28 @@ namespace Project1
     public partial class OutputForm : Form
     {
         //PASSING CHECK NUMBERS BACK AND FORTH IS NOT WORKING
-        static public int checkCount = 0;
-        static public int checkNumber = 3002;
-        InputForm ip = new InputForm(checkCount, checkNumber);
-        public OutputForm(int cCount, int cNumber)
+        static public int checkCount = 1;
+        static private int checkNumber = 3002;
+        InputForm ip = new InputForm();
+        public OutputForm()
         {
-            checkNumber = cNumber;
-            checkCount = cCount;
+        
             InitializeComponent();
             // Get the current date.
             DateTime thisDay = DateTime.Today;
             // Display the date in the default (general) format.
             DateInputLabel.Text = "_____" + thisDay.ToString("d") + "_____";
-
+            TopRightCheckNumLabel.Text = checkNumber.ToString();
+           // NumberOfChecks.Text = checkCount.ToString();
             InputNameLabel.Text = ip.getName();
             InputAmountLabel.Text = ip.getDollar();
             InputMemoLabel.Text = ip.getMemo();
+            CheckNumbBottomLabel.Text = checkNumber.ToString();
             AmountStringLabel.Text = InputProcessor.parseInput(ip.getDollar()) ;
+
+            NumbOfChecksLabel.Text = Tally.checkCount().ToString();
+            SumLabel.Text = Tally.checkSum(ip.getDollar());
+
 
         }
 
@@ -57,8 +62,8 @@ namespace Project1
             //newCheck = int.Parse(TopRightCheckNumLabel.Text);
             TopRightCheckNumLabel.Text = checkNumber.ToString();
             CheckNumbBottomLabel.Text = checkNumber.ToString();
-            //checkCount++;
-            //checkNumber++;
+            checkCount++;
+            checkNumber++;
 
             //CLEAR CURRENT CHECK FIELDS TO BLANK
             InputNameLabel.Text = "";
@@ -86,6 +91,11 @@ namespace Project1
         private void MemoTextBox_TextChanged(object sender, EventArgs e)
         {
             //INPUT CLASS WILL HANDLE MEMO LENGTH CONSTRAINTS 
+        }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

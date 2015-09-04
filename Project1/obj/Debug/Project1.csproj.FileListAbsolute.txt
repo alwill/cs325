@@ -25,3 +25,4 @@ C:\Users\Alex\Documents\Visual Studio 2015\Projects\Project1\obj\Debug\Project1.
 C:\Users\Alex\Documents\Visual Studio 2015\Projects\Project1\obj\Debug\Project1.InputForm.resources
 C:\Users\Alex\Documents\Visual Studio 2015\Projects\Project1\obj\Debug\InputForm.Properties.Resources.resources
 C:\Users\Alex\Documents\Visual Studio 2015\Projects\Project1\obj\Debug\Project1.csproj.GenerateResource.Cache
+C:\Users\Alex\Documents\Visual Studio 2015\Projects\Project1\obj\Debug\Project1.OutputForm.resources

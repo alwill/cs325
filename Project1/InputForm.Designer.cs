@@ -38,7 +38,7 @@
             this.AmountErrorLabel = new System.Windows.Forms.Label();
             this.AddToCheckButton = new System.Windows.Forms.Button();
             this.ClearButton = new System.Windows.Forms.Button();
-            this.SubmitCheckButton = new System.Windows.Forms.Button();
+            this.MemoErrorLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // NameLabel
@@ -47,9 +47,9 @@
             this.NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameLabel.Location = new System.Drawing.Point(21, 28);
             this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(53, 16);
+            this.NameLabel.Size = new System.Drawing.Size(62, 16);
             this.NameLabel.TabIndex = 0;
-            this.NameLabel.Text = "Name:";
+            this.NameLabel.Text = "Pay To:";
             // 
             // AmountLabel
             // 
@@ -144,24 +144,24 @@
             this.ClearButton.UseVisualStyleBackColor = true;
             this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
-            // SubmitCheckButton
+            // MemoErrorLabel
             // 
-            this.SubmitCheckButton.AutoSize = true;
-            this.SubmitCheckButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubmitCheckButton.Location = new System.Drawing.Point(328, 196);
-            this.SubmitCheckButton.Name = "SubmitCheckButton";
-            this.SubmitCheckButton.Size = new System.Drawing.Size(116, 38);
-            this.SubmitCheckButton.TabIndex = 10;
-            this.SubmitCheckButton.Text = "Submit Check";
-            this.SubmitCheckButton.UseVisualStyleBackColor = true;
-            this.SubmitCheckButton.Click += new System.EventHandler(this.SubmitCheckButton_Click);
+            this.MemoErrorLabel.AutoSize = true;
+            this.MemoErrorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemoErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.MemoErrorLabel.Location = new System.Drawing.Point(274, 145);
+            this.MemoErrorLabel.Name = "MemoErrorLabel";
+            this.MemoErrorLabel.Size = new System.Drawing.Size(211, 16);
+            this.MemoErrorLabel.TabIndex = 11;
+            this.MemoErrorLabel.Text = "* Max memo length exceeded";
+            this.MemoErrorLabel.Visible = false;
             // 
-            // Project1
+            // InputForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(485, 246);
-            this.Controls.Add(this.SubmitCheckButton);
+            this.Controls.Add(this.MemoErrorLabel);
             this.Controls.Add(this.ClearButton);
             this.Controls.Add(this.AddToCheckButton);
             this.Controls.Add(this.AmountErrorLabel);
@@ -172,7 +172,7 @@
             this.Controls.Add(this.MemoLabel);
             this.Controls.Add(this.AmountLabel);
             this.Controls.Add(this.NameLabel);
-            this.Name = "Project1";
+            this.Name = "InputForm";
             this.Text = "Check Creation";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -191,7 +191,7 @@
         private System.Windows.Forms.Label AmountErrorLabel;
         private System.Windows.Forms.Button AddToCheckButton;
         private System.Windows.Forms.Button ClearButton;
-        private System.Windows.Forms.Button SubmitCheckButton;
+        private System.Windows.Forms.Label MemoErrorLabel;
     }
 }
 

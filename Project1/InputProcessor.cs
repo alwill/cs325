@@ -16,8 +16,15 @@ namespace Project1
             string[] parsedUserInput = userinput.Split('.'); //splits the user into two seperate parts. The whole amount and decimal
 
             string dollarAmount = parsedUserInput[0];
-
-            int leftDecimal = int.Parse(dollarAmount);
+            int leftDecimal = 0;
+            if (dollarAmount == "")
+            {
+                leftDecimal = 0;
+            }
+            else
+            {
+                 leftDecimal = int.Parse(dollarAmount);
+            }
             string rightDecimal = parsedUserInput[1];
 
             string intToString = dollarToString(leftDecimal);
@@ -33,10 +40,10 @@ namespace Project1
 
 
 
-            Console.WriteLine("first" + fullAmount);
+            
 
-            string[] lessThanTwenty = { " zero", " one", " two", " three", " four", " five", " six", " seven", " eight", " nine", " ten", " eleven", " twelve", " thirteen", " fourteen", " fifteen", " seventeen", " eighteen", " nineteen" };
-            string[] tensPlace = { " zero", " ten", " tewenty", " thirty", " forty", " fifty", " sixty", " sevnety", " eighty", " ninety" };
+            string[] lessThanTwenty = { " zero", " one", " two", " three", " four", " five", " six", " seven", " eight", " nine", " ten", " eleven", " twelve", " thirteen", " fourteen", " fifteen", " sixteen", " seventeen", " eighteen", " nineteen" };
+            string[] tensPlace = { " zero", " ten", " tewnty", " thirty", " forty", " fifty", " sixty", " seventy", " eighty", " ninety" };
             string[] largerPlace = { " zero", " hundred", " thousand", " million" };
 
             if (fullAmount == 0)
@@ -51,15 +58,15 @@ namespace Project1
             if ((fullAmount / 1000) > 0)
             {
                 fullAmountString += dollarToString(fullAmount / 1000) + largerPlace[2]; //recureses to check for hundreds and adds thousand;
-                Console.WriteLine(fullAmount);
+                
                 fullAmount = fullAmount % 1000;
-                Console.WriteLine("second:" + fullAmount);
+                
             }
             if ((fullAmount / 100) > 0)
             {
                 fullAmountString += dollarToString(fullAmount / 100) + largerPlace[1]; // recures to check for ten and ones 
                 fullAmount = fullAmount % 100;
-                Console.WriteLine("third" + fullAmount);
+              
             }
 
             if (fullAmount > 0)
@@ -68,11 +75,11 @@ namespace Project1
                 if (fullAmount < 20)
                 {
                     fullAmountString += lessThanTwenty[fullAmount];
-                    Console.WriteLine("fourth: " + fullAmount);
+                   
                 }
                 else
                 {
-                    Console.WriteLine("fifth: " + (fullAmount));
+                    
                     fullAmountString += tensPlace[fullAmount / 10];
                     if ((fullAmount % 10) > 0)
                     {
