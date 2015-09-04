@@ -22,6 +22,7 @@ namespace Project1
         {
         
             InitializeComponent();
+            this.FormClosing += OutputForm_FormClosing;
             // Get the current date.
             DateTime thisDay = DateTime.Today;
             // Display the date in the default (general) format.
@@ -39,6 +40,15 @@ namespace Project1
 
 
         }
+
+        /*
+         *  OutputForm_FormClosing() method allows the exit of this form to close the entire app,
+         *    rather than just close this form and keep the InputForm running in the background.
+         */
+        private void OutputForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        } // End OutputForm_FormClosing() method
 
         //THIS BUTTON SUBMITS INFO IN TEXT BOX TO POPULATE CHECK
         private void button1_Click(object sender, EventArgs e)

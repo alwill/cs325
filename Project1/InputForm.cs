@@ -13,37 +13,57 @@ namespace Project1
 {
     public partial class InputForm : Form
     {
-        static string cName { get; set; }
-        static string cAmount { get; set; }
-        static string cMemo { get; set; }
-        static double cDoubleAmount { get; set; }
-        static int deciNum { get; set; }
-        static bool validName { get; set; }
-        static bool validAmount { get; set; }
-        static bool validMemo { get; set; }
-        static string cDollarString { get; set; }
-        //static OutputForm oi = new OutputForm();
-        public static int cc = 0;
-        public static int cn = 3002;
+        static string cName { get; set; }           //Store the "Pay To" input string
+        static string cAmount { get; set; }         //Store the "Amount" input string
+        static string cMemo { get; set; }           //Store the "Memo" input string
+        static double cDoubleAmount { get; set; }   //Store the cAmount field as a double
+        static int deciNum { get; set; }            //Store the number of decimal points in the "Amount" input string
+        static bool validName { get; set; }         //Store whether the current "Pay To" input has been validated
+        static bool validAmount { get; set; }       //Store whether the current "Amount" input has been validated
+        static bool validMemo { get; set; }         //Store whether the current "Memo" input has been validated
+        static string cDollarString { get; set; }   //Store the validated "Amount" as a string of words spelled out
+        public static int cc = 0;                   //Initial check count
+        public static int cn = 3002;                //Initial check number
 
+        /*
+         *  InputForm() constructor that allows for specifying check count and check number
+         */
         public InputForm(int myCC, int myCN)
         {
             cc = myCC;
             cn = myCN;
             InitializeComponent();
-        }
+            this.FormClosing += InputForm_FormClosing;
+        } //End InputForm(int, int) constructor
+
+        /*
+         *  InputForm() constructor that initializes the default form with no parameters passed.
+         */
         public InputForm()
         {
             InitializeComponent();
-        }
+            this.FormClosing += InputForm_FormClosing;
+        } //End InputForm() default constructor
+
+        /*
+         *  InputForm_FormClosing() method allows the exit of this form to close the entire app,
+         *    rather than just close this form and keep the OutputForm running in the background.
+         */
+        private void InputForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        } //End InputForm_FormClosing() method
 
         /*  
-         *  AddToCheckButton_Click is the method that validates the user input and then store the input into three separate static strings.
+         *  AddToCheckButton_Click() is the method that validates the user input and then store the input into three separate static strings.
+         *  Upon method call, all static fields used for input validation are reset to their "empty" or "null" values.
          *  -First, the name text box is checked to determine whether or not anything was entered.
          *  -Second, the amount text box is checked to ensure a double was entered (or rather, a string that can be parsed into a double), then that amount string
          *    is ran through a check to determine if there is one (and only one) decimal point. If multiple decimal points are detected, an error message appears.
          *    If no decimals are detected, the string ".00" will be appended to the string then stored.
-         *  -No validation is performed on the Memo input, since it is an optional field.
+         *  -Last, the only validation ran on the Memo line is whether it exceeds a maximum value. Since the text box has a specified maximum, this check could possibly be removed.
+         *  Once all fields are validated, execution of the program is passed to the OutputForm, which brings up a separate interface.
+         *  Note that each field being validated has its own respective validate____Field() method call.
          */
         private void AddToCheckButton_Click(object sender, EventArgs e)
         {
@@ -73,13 +93,12 @@ namespace Project1
                 OutputForm oi = new OutputForm();
                 oi.ShowDialog();
             }
-        } // end AddToCheckButton_Click()
+        } // end AddToCheckButton_Click() method
 
         /*
          *  ClearButton_Click method simply clears the text box entries to their respective defaults.
          *  This method could be utilized to "cancel" a check before submitting it as well, by clearing the label fields on the check portion of the interface.
          */
-
         private void ClearButton_Click(object sender, EventArgs e)
         {
             NameTextBox.Text = "";
@@ -87,32 +106,39 @@ namespace Project1
             AmountTextBox.Text = "0.00";
             AmountErrorLabel.Visible = false;
             MemoTextBox.Text = "";
-            /*
-             *  ***Can add clear check fields here if desired.***
-             */
-        }
+        } //End ClearButton_Click() method
 
-        private void SubmitCheckButton_Click(object sender, EventArgs e)
-        {
-            /*
-             *  ***Add input processor method calls here, pass handling to output interface?
-             */
-        }
-
+        /*
+         *  getName() method serves as an accessor for the cName field, used by the OutputForm.
+         *  The default get and set did not work as intended, so this method was created.
+         */
         public string getName() {
             return cName;
-        }
+        } //End getName() method
 
+        /*
+         *  getDollar() method serves as an accessor for the cAmount field, used by the OutputForm and InputProcessor.
+         *  The default get and set did not work as intended, so this method was created.
+         */
         public string getDollar()
         {
             return cAmount;
-        }
+        } //End getDollar() method
 
+        /*
+         *  getMemo() method serves as an accessor for the cMemo field, used by the OutputForm.
+         *  The default get and set did not work as intended, so this method was created.
+         */
         public string getMemo()
         {
             return cMemo;
-        }
+        } //End getMemo() method
 
+        /*
+         *  validateNameField() method takes the user input for the "Pay To" field and ensures that the field is not blank.
+         *  An additional check could be implemented to test against a max name size, but was not included in this version.
+         *  Returns a boolean representing whether the Name field is valid.
+         */
         public bool validateNameField()
         {
             bool isValid = true;
@@ -127,8 +153,18 @@ namespace Project1
                 cName = NameTextBox.Text;
                 return isValid;
             }
-        }
+        } //End validateNameField() method
 
+        /*
+         *  validateAmountField() method steps through the process of validating the amount string input by the user, prior to passing the string to the InputProcessor.
+         *  First, a test is performed to determine if the input can be parsed as a double. If not, the appropriate error message is displayed. If the input can be parsed,
+         *    any commas in the input are dealt with, and the number of decimal points are counted (in case of erroneous input). Based on the number of decimal points,
+         *    we can determine whether no decimal values were input (deciNum == 0), one decimal point was input (desired case) or multiple digits were input (error message displayed).
+         *  Within the code itself, the different cases that arise when a single decimal point is input are listed, and after a count of the number of digits following the decimal,
+         *    a switch is performed on that value. Once the case is determined, the appropriate actions take place: append/concatenate necessary numeric text, hide/show error
+         *    messages, and conversion to a double as a courtesy to Joe's Tally class :)  <-I don't think will be used in this version, as he handles the conversion in his class.
+         *  Returns a boolean representing whether the Amount field is valid.
+         */
         public bool validateAmountField()
         {
             bool isValid = true;
@@ -163,6 +199,7 @@ namespace Project1
                  *          4. a decimal with > 2 digits trailing
                  */
                 {
+                    //In order to determine the number of trailing digits, we will split the string by the decimal...
                     string[] amountParts = AmountTextBox.Text.Split('.');
                     Console.WriteLine("Here are the amountParts: ");
                     for (int i = 0; i < amountParts.Length; i++)
@@ -175,6 +212,7 @@ namespace Project1
                         cAmount = String.Concat("0", cAmount);
                     }
 
+                    //... and count the number of digits trailing the decimal point
                     int deciDigitCount = amountParts[1].Length;
                     Console.WriteLine("Here is the value of deciDigitCount: " + deciDigitCount);
 
@@ -229,9 +267,15 @@ namespace Project1
                 Console.WriteLine("Double parsing failed!");
                 AmountErrorLabel.Visible = true;
                 return !isValid;
-            }
-        }
+            } //End else from (if (doubleParse successful))
+        } //End validateAmountField() method
 
+        /*
+         *  validateMemoField() method simply checks whether the input is longer than 30 characters. Since the Memo line is an optional field on checks, no "null" validation
+         *    is performed as in the validateNameField() method. Within the properties of the Memo Text Box, a maximum input value is specified which prohibits users from 
+         *    exceeding a certain length, so really this method is unnecessary, but is still used in this version.
+         *  Returns a boolean representing whether the Memo field is valid.
+         */
         public bool validateMemoField()
         {
             bool isValid = true;
@@ -239,13 +283,14 @@ namespace Project1
             {
                 MemoErrorLabel.Visible = true;
                 return !isValid;
-            }
+            } //End if (Memo too big)
             else
             {
                 MemoErrorLabel.Visible = false;
                 cMemo = MemoTextBox.Text;
                 return isValid;
-            }
-        }
-    }
-}
+            } //End else from if (Memo too big)
+        } //End validateMemoField() method
+
+    } //End InputForm class definition
+} //End Project1 namespace declaration

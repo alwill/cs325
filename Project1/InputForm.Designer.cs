@@ -124,7 +124,7 @@
             // 
             this.AddToCheckButton.AutoSize = true;
             this.AddToCheckButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddToCheckButton.Location = new System.Drawing.Point(45, 196);
+            this.AddToCheckButton.Location = new System.Drawing.Point(84, 196);
             this.AddToCheckButton.Name = "AddToCheckButton";
             this.AddToCheckButton.Size = new System.Drawing.Size(116, 38);
             this.AddToCheckButton.TabIndex = 8;
@@ -136,7 +136,7 @@
             // 
             this.ClearButton.AutoSize = true;
             this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClearButton.Location = new System.Drawing.Point(185, 196);
+            this.ClearButton.Location = new System.Drawing.Point(277, 196);
             this.ClearButton.Name = "ClearButton";
             this.ClearButton.Size = new System.Drawing.Size(116, 38);
             this.ClearButton.TabIndex = 9;
@@ -173,6 +173,7 @@
             this.Controls.Add(this.AmountLabel);
             this.Controls.Add(this.NameLabel);
             this.Name = "InputForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Check Creation";
             this.ResumeLayout(false);
             this.PerformLayout();

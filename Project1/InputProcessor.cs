@@ -43,7 +43,7 @@ namespace Project1
             
 
             string[] lessThanTwenty = { " zero", " one", " two", " three", " four", " five", " six", " seven", " eight", " nine", " ten", " eleven", " twelve", " thirteen", " fourteen", " fifteen", " sixteen", " seventeen", " eighteen", " nineteen" };
-            string[] tensPlace = { " zero", " ten", " tewnty", " thirty", " forty", " fifty", " sixty", " seventy", " eighty", " ninety" };
+            string[] tensPlace = { " zero", " ten", " twenty", " thirty", " forty", " fifty", " sixty", " seventy", " eighty", " ninety" };
             string[] largerPlace = { " zero", " hundred", " thousand", " million" };
 
             if (fullAmount == 0)
