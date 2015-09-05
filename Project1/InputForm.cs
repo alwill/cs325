@@ -1,4 +1,21 @@
-﻿using System;
+﻿/*
+ *  File: InputForm.cs
+ *  Project: Introductory Project 1: Checks
+ *  Primary Author: Geoffrey Cooley
+ *  Contributing Team Members: Alex Will, Doug Hott, Joe Meyers
+ *  Team Name: Djas
+ *  Date Created: 8/30/2015
+ *  Last Modified: 9/5/2015
+ *  Description: The InputForm class provides users with an input interface for populating fields on a check.
+ *               Once valid data is received, program execution is passed to the OutputForm interface class,
+ *               where the InputProcessor and Tally classes pull data to populate their respective text fields
+ *               on the check itself and the OutputForm class generates a image of the newly-created check.
+ *               This file provides the functionality and input validation for the form specified in the 
+ *               InputForm.Designer.cs file.
+ *
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,6 +28,7 @@ using System.Windows.Forms;
 
 namespace Project1
 {
+    //This partial class is also defined within InputForm.Designer.cs
     public partial class InputForm : Form
     {
         static string cName { get; set; }           //Store the "Pay To" input string
@@ -33,7 +51,7 @@ namespace Project1
             cc = myCC;
             cn = myCN;
             InitializeComponent();
-            this.FormClosing += InputForm_FormClosing;
+            this.FormClosing += InputForm_FormClosing; //Subscribe this form's FormClosing property to the defined method, so if the InputForm is closed, the whole application will close.
         } //End InputForm(int, int) constructor
 
         /*
@@ -42,7 +60,7 @@ namespace Project1
         public InputForm()
         {
             InitializeComponent();
-            this.FormClosing += InputForm_FormClosing;
+            this.FormClosing += InputForm_FormClosing; //Subscribe this form's FormClosing property to the defined method, so if the InputForm is closed, the whole application will close.
         } //End InputForm() default constructor
 
         /*
