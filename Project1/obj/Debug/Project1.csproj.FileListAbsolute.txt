@@ -36,3 +36,13 @@ C:\Users\Geoff\Documents\GitHub\cs325\Project1\obj\Debug\Project1.InputForm.reso
 C:\Users\Geoff\Documents\GitHub\cs325\Project1\obj\Debug\Project1.OutputForm.resources
 C:\Users\Geoff\Documents\GitHub\cs325\Project1\obj\Debug\InputForm.Properties.Resources.resources
 C:\Users\Geoff\Documents\GitHub\cs325\Project1\obj\Debug\Project1.csproj.GenerateResource.Cache
+C:\Users\Alex\Documents\GitHub\cs325\Project1\bin\Debug\InputForm.exe.config
+C:\Users\Alex\Documents\GitHub\cs325\Project1\obj\Debug\InputForm.exe
+C:\Users\Alex\Documents\GitHub\cs325\Project1\obj\Debug\InputForm.pdb
+C:\Users\Alex\Documents\GitHub\cs325\Project1\bin\Debug\InputForm.exe
+C:\Users\Alex\Documents\GitHub\cs325\Project1\bin\Debug\InputForm.pdb
+C:\Users\Alex\Documents\GitHub\cs325\Project1\obj\Debug\Project1.csprojResolveAssemblyReference.cache
+C:\Users\Alex\Documents\GitHub\cs325\Project1\obj\Debug\Project1.InputForm.resources
+C:\Users\Alex\Documents\GitHub\cs325\Project1\obj\Debug\Project1.OutputForm.resources
+C:\Users\Alex\Documents\GitHub\cs325\Project1\obj\Debug\InputForm.Properties.Resources.resources
+C:\Users\Alex\Documents\GitHub\cs325\Project1\obj\Debug\Project1.csproj.GenerateResource.Cache
